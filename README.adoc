@@ -1,0 +1,70 @@
+//Ref : https://gist.github.com/dcode/0cfbf2699a1fe9b46ff04c41721dda74
+= ওপেনবাংলা কিবোর্ড
+ifdef::env-github[]
+:imagesdir:
+ https://gist.githubusercontent.com/path/to/gist/revision/dir/with/all/images
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+ifndef::env-github[]
+:imagesdir: .
+endif::[]
+:toc:
+:toc-placement!:
+
+
+//HTML for formating the logo
+
+++++
+<p align="center">
+<img src="https://github.com/OpenBangla/OpenBangla-Keyboard/raw/master/data/128.png"></p>
+++++
+
+
+*ওপেনবাংলা কিবোর্ড* হচ্ছে গ্নু/লিনাক্স সিস্টেমের জন্য একটি উন্মুক্ত এবং ইউনিকোড-সমর্থিত স্বয়ংসম্পূর্ণ বাংলা লেখার সফটওয়্যার।
+
+গতিশীল লেখার উদ্দেশ্যে এতে বিভিন্ন শুদ্ধিকরণ ও স্বয়ংক্রিয় টাইপিং ব্যবস্থা রয়েছে, এবং অভ্র ফোনেটিক, প্রভাত, মুনীর অপ্টিমা, জাতীয়, ইত্যাদি সুপ্রচলিত লেআউটগুলো উপস্থিত আছে।
+
+https://www.omicronlab.com/avro-keyboard.html[অভ্র কীবোর্ডের] অধিকাংশ ফিচার ওপেনবাংলা কিবোর্ডে রয়েছে, তাই অভ্রর ব্যবহারকারীরা লিনাক্সে এসে এখানে সহজেই স্বাচ্ছন্দ্য বোধ করবেন।
+
+image:https://github.com/OpenBangla/OpenBangla-Keyboard/workflows/CI/badge.svg[CI, link=https://github.com/OpenBangla/OpenBangla-Keyboard/actions?query=workflow%3ACI+branch%3Amaster] {nbsp}
+image:https://img.shields.io/github/downloads/OpenBangla/OpenBangla-Keyboard/total.svg?label=GitHub%20Downloads[Github Downloads, link=https://img.shields.io/github/downloads/OpenBangla/OpenBangla-Keyboard/total.svg?label=GitHub%20Downloads] {nbsp}
+
+
+== ফিচারসমূহ
+* অভ্র কিবোর্ডের মত _টপ বার_, কনফিগারেশন হাতের কাছেই।
+* লেআউট প্রদর্শন উইন্ডো
+* ফোনেটিক কিবোর্ড লেআউট (অভ্র ফোনেটিক)
+  ** অভ্র ফোনেটিক টাইপিং পদ্ধতির সঙ্গে শতভাগ সামঞ্জস্যপূর্ণ।
+  ** ডিকশনারি ফিচারের সাহায্যে স্বয়ংক্রিয়ভাবে কাছাকাছি উচ্চারণের অন্যান্য শব্দ সঠিক বানাসহ প্রদর্শন করে।
+  ** প্রচুর প্রচলিত ইংরেজি শব্দসমূহও প্রদর্শন করে (যেমন "ফেসবুক", "ডাউনলোড")।
+  ** অটোকারেক্ট ফিচারের সাহায্যে প্রচুর সাধারণ ভুল বানানের সঠিক রুপটি প্রদর্শন করে।
+  ** ব্যবহারকারী নিজের পছন্দমত অটোকারেক্ট শব্দ যোগ করতে পারেন।
+  ** মূল টাইপ করা শব্দের সম্ভাব্য বিকল্প বা কাছাকাছি বানানের শব্দসমূহ প্রিভিউ উইন্ডোতে প্রদর্শন করে।
+* ফিক্সড কিবোর্ড লেআউট
+  ** ওপেনবাংলা কিবোর্ডে প্রভাত, মুনীর অপ্টিমা, অভ্র ইজি, বর্ণনা, জাতীয় কিবোর্ড লেআউট অন্তর্ভূক্ত আছে।
+  ** অভ্র কিবোর্ড লেআউট ফাইল ফরম্যাট (৫ম সংস্করণ) সমর্থন করে।
+* স্বয়ংক্রিয় টাইপিং সংশোধন সুবিধাসমূহ
+  ** স্বয়ংক্রিয় স্বরবর্ণ স্থাপন।
+  ** পুরাতন রীতির রেফ।
+  ** পূর্বপ্রচলিত -কার সংযোগ রীতি।
+  ** চন্দ্রবিন্দুর অবস্থান সংশোধন।
+
+
+== ইনস্টল পদ্ধতি
+
+মূলত এই রিপোজিটরিটির স্ক্রিপ্ট দ্বারা fcitx5 এর সাথে ব্যবহারের জন্যে ওপেনবাংলা কিবোর্ড সহজে ইন্সটল করতে পারবেন। 
+
+
+== সহজ ইন্সটল পদ্ধতি
+
+টার্মিনাল ওপেন করে নিচের কমান্ডটি কপি করে টার্মিনালে পেস্ট করুনঃ
+```bash
+bash -c "$(wget -q https://raw.githubusercontent.com/asifakonjee/openbangla-script/master/installer.sh -O -)"
+```
+
+=== শেষ ধাপঃ
+রিস্টার্ট করুন বা লগ আউট করে পুনরায় লগ ইন করুন। এবার fcitx5 configtool ওপেন করে সেখানে add layout এ গিয়ে openbangla লিখে সার্চ করুন এবং openbangla keyboard এড করুন। এরপর Global Options এ গিয়ে ভাষা পরিবর্তনের জন্যে আপনার পছন্দমতো কিবোর্ড শর্টকাট এড করে নিন।   
