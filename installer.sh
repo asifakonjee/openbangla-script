@@ -86,7 +86,7 @@ case "$pkg" in
         sudo xbps-install -y base-devel make cmake rust cargo qt5-declarative-devel libzstd-devel qt5-devel git ibus ibus-devel fcitx5 libfcitx5-devel fcitx5-configtool
         ;;
     apt)
-        sudo apt install -y build-essential rustc cargo cmake libibus-1.0-dev qtbase5-dev qtbase5-dev-tools libzstd-dev fcitx5 fcitx5-config-qt git
+        sudo apt install -y build-essential rustc cargo cmake libibus-1.0-dev qtbase5-dev qtbase5-dev-tools libzstd-dev libfcitx5core-dev fcitx5 fcitx5-config-qt git
         ;;
     *)
         echo "Unsupported package manager: $pkg"
