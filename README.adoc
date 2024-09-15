@@ -76,4 +76,8 @@ bash -c "$(wget -q https://raw.githubusercontent.com/asifakonjee/openbangla-scri
 
 == শেষ ধাপ
 
-রিস্টার্ট করুন বা লগ আউট করে পুনরায় লগ ইন করুন। এবার fcitx5 configtool ওপেন করে সেখানে add layout এ গিয়ে openbangla লিখে সার্চ করুন এবং openbangla keyboard এড করুন। এরপর Global Options এ গিয়ে ভাষা পরিবর্তনের জন্যে আপনার পছন্দমতো কিবোর্ড শর্টকাট এড করে নিন।   
+=== fcitx5 এর জন্যে
+রিস্টার্ট করুন বা লগ আউট করে পুনরায় লগ ইন করুন। এবার fcitx5 configtool ওপেন করে সেখানে add layout এ গিয়ে openbangla লিখে সার্চ করুন এবং openbangla keyboard এড করুন। এরপর Global Options এ গিয়ে ভাষা পরিবর্তনের জন্যে আপনার পছন্দমতো কিবোর্ড শর্টকাট এড করে নিন।
+
+=== ibus এর জন্যে
+রিস্টার্ট করুন বা লগ আউট করে পুনরায় লগ ইন করুন। এবার https://github.com/OpenBangla/OpenBangla-Keyboard/wiki/Configuring-Environment লিংকে গিয়ে আপনার ডেস্কটপ এনভাইরনমেনন্ট অনুযায়ী ibus এ ওপেনবাংলা কিবোর্ড সেট আপ করে নিন। একটি জিনিস খেয়াল রাখবেন যে, Gnome ব্যতীত বাকি ডেস্কটপ এনভাইরনমেন্টগুলাতে ওয়েল্যান্দ সেশানে ibus এর চেয়ে fcitx5 বেশি ভালো কাজ করে।
