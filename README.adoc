@@ -56,15 +56,24 @@ image:https://img.shields.io/github/downloads/OpenBangla/OpenBangla-Keyboard/tot
 
 == ইনস্টল পদ্ধতি
 
-মূলত এই রিপোজিটরিটির স্ক্রিপ্ট দ্বারা fcitx5 এর সাথে ব্যবহারের জন্যে ওপেনবাংলা কিবোর্ড সহজে ইন্সটল করতে পারবেন। 
+মূলত এই রিপোজিটরিটির স্ক্রিপ্ট দ্বারা fcitx5 এবং ibus এর সাথে ব্যবহারের জন্যে ওপেনবাংলা কিবোর্ড সহজে ইন্সটল করতে পারবেন।
 
 
 == সহজ ইন্সটল পদ্ধতি
 
+=== fcitx5 এর জন্যে
 টার্মিনাল ওপেন করে নিচের কমান্ডটি কপি করে টার্মিনালে পেস্ট করুনঃ
 ```bash
 bash -c "$(wget -q https://raw.githubusercontent.com/asifakonjee/openbangla-script/master/installer.sh -O -)"
 ```
 
-=== শেষ ধাপঃ
+=== fcitx5 এর জন্যে
+টার্মিনাল ওপেন করে নিচের কমান্ডটি কপি করে টার্মিনালে পেস্ট করুনঃ
+```bash
+bash -c "$(wget -q https://raw.githubusercontent.com/asifakonjee/openbangla-script/master/ibus.sh -O -)"
+```
+
+
+== শেষ ধাপ
+
 রিস্টার্ট করুন বা লগ আউট করে পুনরায় লগ ইন করুন। এবার fcitx5 configtool ওপেন করে সেখানে add layout এ গিয়ে openbangla লিখে সার্চ করুন এবং openbangla keyboard এড করুন। এরপর Global Options এ গিয়ে ভাষা পরিবর্তনের জন্যে আপনার পছন্দমতো কিবোর্ড শর্টকাট এড করে নিন।   
