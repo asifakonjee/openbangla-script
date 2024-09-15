@@ -67,7 +67,7 @@ image:https://img.shields.io/github/downloads/OpenBangla/OpenBangla-Keyboard/tot
 bash -c "$(wget -q https://raw.githubusercontent.com/asifakonjee/openbangla-script/master/installer.sh -O -)"
 ```
 
-=== fcitx5 এর জন্যে
+=== ibus এর জন্যে
 টার্মিনাল ওপেন করে নিচের কমান্ডটি কপি করে টার্মিনালে পেস্ট করুনঃ
 ```bash
 bash -c "$(wget -q https://raw.githubusercontent.com/asifakonjee/openbangla-script/master/ibus.sh -O -)"
