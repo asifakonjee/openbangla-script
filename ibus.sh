@@ -204,6 +204,17 @@ echo "GTK_IM_MODULE=ibus
 QT_IM_MODULE=ibus
 XMODIFIERS=@im=ibus" | sudo tee /etc/environment &> /dev/null
 
+# installing bangla fonts
+printf "${action}\n==> Now installing some Bangla Fonts\n"
+
+git clone --depth=1 https://github.com/shell-ninja/Bangla-Fonts.git "$dir/.cache/Bangla-Fonts"
+
+if [[ -d "$dir/.cache/Bangla-Fonts" ]]; then
+    cp -r "$dir/.cache/Bangla-Fonts/Bangla-Fonts" ~/.local/share/fonts/
+    sudo fc-cache -fv
+fi
+
+
 printf "${done}\n==> Installation completed successfully!\n"
 
 exit 0
