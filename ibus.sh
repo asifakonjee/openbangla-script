@@ -46,14 +46,16 @@ printf " \n \n"
 ###------ Startup ------###
 
 # finding the presend directory and log file
-present_dir="$(dirname "$(realpath "$0")")"
-cache_dir="$present_dir/.cache"
+dir="$(dirname "$(realpath "$0")")"
+cache_dir="$dir/.cache"
 
 # log directory
-log="$present_dir/Install.log"
+log="$dir/Install.log"
 if [[ ! -f "$log" ]]; then
     touch "$log"
 fi
+
+clear
 
 
 # Detect package manager
@@ -193,6 +195,14 @@ sudo make install 2>&1 | tee -a "$log" || {
     printf "${error}\n! Installation failed\n"
     exit 1
 }
+
+sleep 1 && clear
+
+# setting things in the /etc/environment
+printf "${action}\n==> Setting things for ibus"
+echo "GTK_IM_MODULE=ibus
+QT_IM_MODULE=ibus
+XMODIFIERS=@im=ibus" | sudo tee /etc/environment &> /dev/null
 
 printf "${done}\n==> Installation completed successfully!\n"
 
