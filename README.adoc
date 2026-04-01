@@ -12,83 +12,261 @@ endif::[]
 ifndef::env-github[]
 :imagesdir: .
 endif::[]
-:toc:
-:toc-placement!:
-
-
-//HTML for formating the logo
+:toc: macro
+:toc-title: 📑 সূচিপত্র
 
 ++++
-<p align="center">
-<img src="https://github.com/OpenBangla/OpenBangla-Keyboard/raw/master/data/128.png"></p>
+<div align="center">
+  
+<img src="https://github.com/OpenBangla/OpenBangla-Keyboard/raw/master/data/128.png" alt="OpenBangla Keyboard Logo" width="140" style="margin: 20px 0;">
+
+<h1>🇧🇩 ওপেনবাংলা কিবোর্ড</h1>
+
+<p><strong>গ্নু/লিনাক্সের জন্য আধুনিক ও স্বয়ংসম্পূর্ণ বাংলা লেখার সমাধান</strong></p>
+
+<p>
+  <a href="https://github.com/OpenBangla/OpenBangla-Keyboard/actions?query=workflow%3ACI+branch%3Amaster">
+    <img src="https://github.com/OpenBangla/OpenBangla-Keyboard/workflows/CI/badge.svg" alt="CI Status">
+  </a>
+  <a href="https://github.com/OpenBangla/OpenBangla-Keyboard/releases">
+    <img src="https://img.shields.io/github/downloads/OpenBangla/OpenBangla-Keyboard/total.svg?label=Downloads&logo=github&color=brightgreen" alt="GitHub Downloads">
+  </a>
+  <a href="https://github.com/OpenBangla/OpenBangla-Keyboard/releases/latest">
+    <img src="https://img.shields.io/github/v/release/OpenBangla/OpenBangla-Keyboard?label=Latest%20Release&logo=github&color=blue" alt="Latest Release">
+  </a>
+  <a href="https://github.com/OpenBangla/OpenBangla-Keyboard/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/OpenBangla/OpenBangla-Keyboard?color=purple" alt="License">
+  </a>
+</p>
+
+<p>
+  <a href="#-পরিচিতি"><strong>পরিচিতি</strong></a> •
+  <a href="#-বৈশিষ্ট্যসমূহ"><strong>বৈশিষ্ট্য</strong></a> •
+  <a href="#-দ্রুত-ইনস্টলেশন"><strong>ইনস্টলেশন</strong></a> •
+  <a href="#-কনফিগারেশন"><strong>কনফিগারেশন</strong></a> •
+  <a href="#-সাহায্য-ও-সহযোগিতা"><strong>সাহায্য</strong></a>
+</p>
+
+<br>
+
+</div>
 ++++
 
+'''
 
-*ওপেনবাংলা কিবোর্ড* হচ্ছে গ্নু/লিনাক্স সিস্টেমের জন্য একটি উন্মুক্ত এবং ইউনিকোড-সমর্থিত স্বয়ংসম্পূর্ণ বাংলা লেখার সফটওয়্যার।
+toc::[]
 
-গতিশীল লেখার উদ্দেশ্যে এতে বিভিন্ন শুদ্ধিকরণ ও স্বয়ংক্রিয় টাইপিং ব্যবস্থা রয়েছে, এবং অভ্র ফোনেটিক, প্রভাত, মুনীর অপ্টিমা, জাতীয়, ইত্যাদি সুপ্রচলিত লেআউটগুলো উপস্থিত আছে।
+'''
 
-https://www.omicronlab.com/avro-keyboard.html[অভ্র কীবোর্ডের] অধিকাংশ ফিচার ওপেনবাংলা কিবোর্ডে রয়েছে, তাই অভ্রর ব্যবহারকারীরা লিনাক্সে এসে এখানে সহজেই স্বাচ্ছন্দ্য বোধ করবেন।
+== 📖 পরিচিতি
 
-image:https://github.com/OpenBangla/OpenBangla-Keyboard/workflows/CI/badge.svg[CI, link=https://github.com/OpenBangla/OpenBangla-Keyboard/actions?query=workflow%3ACI+branch%3Amaster] {nbsp}
-image:https://img.shields.io/github/downloads/OpenBangla/OpenBangla-Keyboard/total.svg?label=GitHub%20Downloads[Github Downloads, link=https://img.shields.io/github/downloads/OpenBangla/OpenBangla-Keyboard/total.svg?label=GitHub%20Downloads] {nbsp}
+*ওপেনবাংলা কিবোর্ড* হচ্ছে গ্নু/লিনাক্স সিস্টেমের জন্য একটি **উন্মুক্ত** এবং **ইউনিকোড-সমর্থিত** স্বয়ংসম্পূর্ণ বাংলা লেখার সফটওয়্যার। এটি আধুনিক লিনাক্স ব্যবহারকারীদের জন্য সর্বোত্তম বাংলা টাইপিং অভিজ্ঞতা প্রদান করে।
 
+গতিশীল লেখার উদ্দেশ্যে এতে বিভিন্ন **শুদ্ধিকরণ** ও **স্বয়ংক্রিয় টাইপিং ব্যবস্থা** রয়েছে, এবং **অভ্র ফোনেটিক**, **প্রভাত**, **মুনীর অপ্টিমা**, **জাতীয়**, ইত্যাদি সুপ্রচলিত লেআউটগুলো উপস্থিত আছে।
 
-== ফিচারসমূহ
-* অভ্র কিবোর্ডের মত _টপ বার_, কনফিগারেশন হাতের কাছেই।
-* লেআউট প্রদর্শন উইন্ডো
-* ফোনেটিক কিবোর্ড লেআউট (অভ্র ফোনেটিক)
-  ** অভ্র ফোনেটিক টাইপিং পদ্ধতির সঙ্গে শতভাগ সামঞ্জস্যপূর্ণ।
-  ** ডিকশনারি ফিচারের সাহায্যে স্বয়ংক্রিয়ভাবে কাছাকাছি উচ্চারণের অন্যান্য শব্দ সঠিক বানাসহ প্রদর্শন করে।
-  ** প্রচুর প্রচলিত ইংরেজি শব্দসমূহও প্রদর্শন করে (যেমন "ফেসবুক", "ডাউনলোড")।
-  ** অটোকারেক্ট ফিচারের সাহায্যে প্রচুর সাধারণ ভুল বানানের সঠিক রুপটি প্রদর্শন করে।
-  ** ব্যবহারকারী নিজের পছন্দমত অটোকারেক্ট শব্দ যোগ করতে পারেন।
-  ** মূল টাইপ করা শব্দের সম্ভাব্য বিকল্প বা কাছাকাছি বানানের শব্দসমূহ প্রিভিউ উইন্ডোতে প্রদর্শন করে।
-* ফিক্সড কিবোর্ড লেআউট
-  ** ওপেনবাংলা কিবোর্ডে প্রভাত, মুনীর অপ্টিমা, অভ্র ইজি, বর্ণনা, জাতীয় কিবোর্ড লেআউট অন্তর্ভূক্ত আছে।
-  ** অভ্র কিবোর্ড লেআউট ফাইল ফরম্যাট (৫ম সংস্করণ) সমর্থন করে।
-* স্বয়ংক্রিয় টাইপিং সংশোধন সুবিধাসমূহ
-  ** স্বয়ংক্রিয় স্বরবর্ণ স্থাপন।
-  ** পুরাতন রীতির রেফ।
-  ** পূর্বপ্রচলিত -কার সংযোগ রীতি।
-  ** চন্দ্রবিন্দুর অবস্থান সংশোধন।
+[NOTE]
+====
+💡 https://www.omicronlab.com/avro-keyboard.html[অভ্র কীবোর্ডের] অধিকাংশ ফিচার ওপেনবাংলা কিবোর্ডে রয়েছে, তাই অভ্রর ব্যবহারকারীরা লিনাক্সে এসে এখানে সহজেই স্বাচ্ছন্দ্য বোধ করবেন! 🎯
+====
 
+'''
 
-== ইনস্টল পদ্ধতি
+== ✨ বৈশিষ্ট্যসমূহ
 
-মূলত এই রিপোজিটরিটির স্ক্রিপ্ট দ্বারা fcitx5 এবং ibus এর সাথে ব্যবহারের জন্যে ওপেনবাংলা কিবোর্ড সহজে ইন্সটল করতে পারবেন।
+=== 🎨 ইউজার ইন্টারফেস
 
+* ⚡ *টপ বার ইন্টিগ্রেশন* - অভ্র কিবোর্ডের মত _টপ বার_, কনফিগারেশন হাতের কাছেই
+* 🖥️ *লেআউট প্রদর্শন উইন্ডো* - বর্তমান কীবোর্ড লেআউট রিয়েল-টাইমে দেখুন
 
-== সহজ ইন্সটল পদ্ধতি
+=== ⌨️ ফোনেটিক কিবোর্ড লেআউট (অভ্র ফোনেটিক)
 
-=== fcitx5 এর জন্যে
-টার্মিনাল ওপেন করে নিচের কমান্ডটি কপি করে টার্মিনালে পেস্ট করুনঃ
-```bash
+[%autowidth]
+|===
+| বৈশিষ্ট্য | বিবরণ
+
+| 🎯 *১০০% সামঞ্জস্যপূর্ণ*
+| অভ্র ফোনেটিক টাইপিং পদ্ধতির সঙ্গে শতভাগ সামঞ্জস্যপূর্ণ
+
+| 📚 *স্মার্ট ডিকশনারি*
+| ডিকশনারি ফিচারের সাহায্যে স্বয়ংক্রিয়ভাবে কাছাকাছি উচ্চারণের অন্যান্য শব্দ সঠিক বানাসহ প্রদর্শন করে
+
+| 🌐 *ইংরেজি শব্দ সমর্থন*
+| প্রচুর প্রচলিত ইংরেজি শব্দসমূহও প্রদর্শন করে (যেমন "ফেসবুক", "ডাউনলোড")
+
+| ✍️ *অটোকারেক্ট*
+| অটোকারেক্ট ফিচারের সাহায্যে প্রচুর সাধারণ ভুল বানানের সঠিক রূপটি প্রদর্শন করে
+
+| 🔧 *কাস্টমাইজেবল*
+| ব্যবহারকারী নিজের পছন্দমত অটোকারেক্ট শব্দ যোগ করতে পারেন
+
+| 🔮 *প্রিভিউ উইন্ডো*
+| মূল টাইপ করা শব্দের সম্ভাব্য বিকল্প বা কাছাকাছি বানানের শব্দসমূহ প্রিভিউ উইন্ডোতে প্রদর্শন করে
+|===
+
+=== 📝 ফিক্সড কিবোর্ড লেআউট
+
+* 🔤 **সমর্থিত লেআউটসমূহ:**
+** প্রভাত
+** মুনীর অপ্টিমা
+** অভ্র ইজি
+** বর্ণনা
+** জাতীয় কিবোর্ড
+
+* 📄 **অভ্র কিবোর্ড লেআউট ফাইল ফরম্যাট** (৫ম সংস্করণ) সমর্থন করে
+
+=== 🔄 স্বয়ংক্রিয় টাইপিং সংশোধন সুবিধাসমূহ
+
+[cols="1,3"]
+|===
+| আইকন | বৈশিষ্ট্য
+
+| 🔊 | স্বয়ংক্রিয় স্বরবর্ণ স্থাপন
+| 📖 | পুরাতন রীতির রেফ
+| ✏️ | পূর্বপ্রচলিত -কার সংযোগ রীতি
+| ⚫ | চন্দ্রবিন্দুর অবস্থান সংশোধন
+|===
+
+'''
+
+== 🚀 দ্রুত ইনস্টলেশন
+
+[IMPORTANT]
+====
+এই রিপোজিটরিটির স্ক্রিপ্ট দ্বারা **fcitx5** এবং **ibus** এর সাথে ব্যবহারের জন্যে ওপেনবাংলা কিবোর্ড সহজে ইনস্টল করতে পারবেন। ⚡
+====
+
+=== 📦 fcitx5 এর জন্যে
+
+টার্মিনাল ওপেন করে নিচের কমান্ডটি কপি করে টার্মিনালে পেস্ট করুন:
+
+[source,bash]
+----
 bash -c "$(wget -q https://raw.githubusercontent.com/asifakonjee/openbangla-script/master/fcitx5.sh -O -)"
-```
+----
 
-=== ibus এর জন্যে
-টার্মিনাল ওপেন করে নিচের কমান্ডটি কপি করে টার্মিনালে পেস্ট করুনঃ
-```bash
+=== 🔧 ibus এর জন্যে
+
+টার্মিনাল ওপেন করে নিচের কমান্ডটি কপি করে টার্মিনালে পেস্ট করুন:
+
+[source,bash]
+----
 bash -c "$(wget -q https://raw.githubusercontent.com/asifakonjee/openbangla-script/master/ibus.sh -O -)"
-```
+----
 
+'''
 
-== শেষ ধাপ
+== ⚙️ কনফিগারেশন
 
-=== fcitx5 এর জন্যে
-রিস্টার্ট করুন বা লগ আউট করে পুনরায় লগ ইন করুন। এবার fcitx5 configtool ওপেন করে সেখানে add layout এ গিয়ে openbangla লিখে সার্চ করুন এবং openbangla keyboard এড করুন। এরপর Global Options এ গিয়ে ভাষা পরিবর্তনের জন্যে আপনার পছন্দমতো কিবোর্ড শর্টকাট এড করে নিন। কেডিই প্লাজমা ডেস্কটপ এনভাইরনমেন্টের ক্ষেত্রে এর পাশাপাশি সেটিংসে গিয়ে Virtual Keyboard লিখে সার্চ করুন এবং সেখানে fcitx5 সিলেক্ট করে দিন। এরপরেও যদি ব্রাউজার বা লিব্রে অফিসে বাংলা লিখতে সমস্যা হয় তাহলে নিচের লেখাগুলো কপি করে `` /etc/environment `` ফাইলে এড করে দিনঃ
-```bash
+=== 🔵 fcitx5 কনফিগারেশন
+
+==== ধাপ ১: সিস্টেম রিস্টার্ট
+
+রিস্টার্ট করুন বা লগ আউট করে পুনরায় লগ ইন করুন। 🔄
+
+==== ধাপ ২: কীবোর্ড যোগ করুন
+
+. **fcitx5 configtool** ওপেন করুন
+. **Add Layout** এ ক্লিক করুন
+. `openbangla` লিখে সার্চ করুন 🔍
+. **OpenBangla Keyboard** সিলেক্ট করে এড করুন ✅
+
+==== ধাপ ৩: কীবোর্ড শর্টকাট সেট করুন
+
+. **Global Options** এ যান
+. ভাষা পরিবর্তনের জন্যে আপনার পছন্দমতো কীবোর্ড শর্টকাট এড করে নিন ⌨️
+
+==== ধাপ ৪: KDE Plasma ব্যবহারকারীদের জন্য অতিরিক্ত সেটআপ
+
+KDE Plasma ডেস্কটপ এনভাইরনমেন্টের ক্ষেত্রে:
+
+. সেটিংসে যান
+. `Virtual Keyboard` লিখে সার্চ করুন
+. **fcitx5** সিলেক্ট করে দিন
+
+==== ধাপ ৫: সমস্যা সমাধান (যদি প্রয়োজন হয়)
+
+[TIP]
+====
+যদি ব্রাউজার বা লিব্রে অফিসে বাংলা লিখতে সমস্যা হয়, তাহলে নিচের লাইনগুলো `/etc/environment` ফাইলে এড করে দিন:
+====
+
+[source,bash]
+----
 GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
-```
+----
 
-=== ibus এর জন্যে
-রিস্টার্ট করুন বা লগ আউট করে পুনরায় লগ ইন করুন। এবার https://github.com/OpenBangla/OpenBangla-Keyboard/wiki/Configuring-Environment লিংকে গিয়ে আপনার ডেস্কটপ এনভাইরনমেনন্ট অনুযায়ী ibus এ ওপেনবাংলা কিবোর্ড সেট আপ করে নিন। কেডিই প্লাজমা ডেস্কটপ এনভাইরনমেন্টের ক্ষেত্রে এর পাশাপাশি সেটিংসে গিয়ে Virtual Keyboard লিখে সার্চ করুন এবং সেখানে ibus-wayland সিলেক্ট করে দিন। এরপরেও যদি ব্রাউজার বা লিব্রে অফিসে বাংলা লিখতে সমস্যা হয় তাহলে নিচের লেখাগুলো কপি করে `` /etc/environment `` ফাইলে এড করে দিনঃ
-```bash
+'''
+
+=== 🔴 ibus কনফিগারেশন
+
+==== ধাপ ১: সিস্টেম রিস্টার্ট
+
+রিস্টার্ট করুন বা লগ আউট করে পুনরায় লগ ইন করুন। 🔄
+
+==== ধাপ ২: ibus সেটআপ
+
+https://github.com/OpenBangla/OpenBangla-Keyboard/wiki/Configuring-Environment[এই লিংকে] গিয়ে আপনার ডেস্কটপ এনভাইরনমেন্ট অনুযায়ী **ibus** এ ওপেনবাংলা কিবোর্ড সেট আপ করে নিন। 📖
+
+==== ধাপ ৩: KDE Plasma ব্যবহারকারীদের জন্য অতিরিক্ত সেটআপ
+
+KDE Plasma ডেস্কটপ এনভাইরনমেন্টের ক্ষেত্রে:
+
+. সেটিংসে যান
+. `Virtual Keyboard` লিখে সার্চ করুন
+. **ibus-wayland** সিলেক্ট করে দিন
+
+==== ধাপ ৪: সমস্যা সমাধান (যদি প্রয়োজন হয়)
+
+[TIP]
+====
+যদি ব্রাউজার বা লিব্রে অফিসে বাংলা লিখতে সমস্যা হয়, তাহলে নিচের লাইনগুলো `/etc/environment` ফাইলে এড করে দিন:
+====
+
+[source,bash]
+----
 GTK_IM_MODULE=ibus
 QT_IM_MODULE=ibus
 XMODIFIERS=@im=ibus
-```
-অনেক সময় ibus ওয়েল্যান্ড সেশানে উপর্যুক্ত এনভাইরনমেন্টাল ভ্যারিয়েবল সেট করলে এরর দেয়, সেক্ষেত্রে ```GTK_IM_MODULE=ibus ``` অংশটুকু শুধু রিমুভ করে দিলেই আর এরর মেসেজ শো করবে না।
+----
+
+[CAUTION]
+====
+⚠️ **Wayland ব্যবহারকারীদের জন্য গুরুত্বপূর্ণ নোট:**
+
+অনেক সময় ibus ওয়েল্যান্ড সেশনে উপর্যুক্ত এনভাইরনমেন্টাল ভ্যারিয়েবল সেট করলে এরর দেয়। সেক্ষেত্রে `GTK_IM_MODULE=ibus` অংশটুকু শুধু রিমুভ করে দিলেই আর এরর মেসেজ শো করবে না। ✨
+====
+
+'''
+
+== 📚 সাহায্য ও সহযোগিতা
+
+[cols="1,3"]
+|===
+| 📖 | https://github.com/OpenBangla/OpenBangla-Keyboard/wiki[উইকি ডকুমেন্টেশন]
+| 🐛 | https://github.com/OpenBangla/OpenBangla-Keyboard/issues[ইস্যু রিপোর্ট করুন]
+| 💬 | https://github.com/OpenBangla/OpenBangla-Keyboard/discussions[আলোচনায় অংশ নিন]
+| ⭐ | https://github.com/OpenBangla/OpenBangla-Keyboard[প্রজেক্টকে স্টার দিন]
+|===
+
+'''
+
+++++
+<div align="center">
+  
+<h3>🌟 তৈরি করা হয়েছে ❤️ দিয়ে বাংলা ভাষার জন্য</h3>
+
+<p>
+  <a href="https://github.com/OpenBangla/OpenBangla-Keyboard">
+    <img src="https://img.shields.io/github/stars/OpenBangla/OpenBangla-Keyboard?style=social" alt="GitHub stars">
+  </a>
+  <a href="https://github.com/OpenBangla/OpenBangla-Keyboard/fork">
+    <img src="https://img.shields.io/github/forks/OpenBangla/OpenBangla-Keyboard?style=social" alt="GitHub forks">
+  </a>
+</p>
+
+<p><sub>Made with ❤️ for the Bengali language community</sub></p>
+
+</div>
+++++
